@@ -1,15 +1,15 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Fila fila = new Fila(5);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        fila.enqueue(10);
+        fila.enqueue(20);
+        fila.enqueue(30);
+
+        System.out.println("Primeiro da fila: " + fila.peek());
+        System.out.println("Elemento removido: " + fila.dequeue());
+        System.out.println("Primeiro apos dequeue: " + fila.peek());
+        System.out.println("Fila vazia? " + fila.isEmpty());
+        System.out.println("Fila cheia? " + fila.isFull());
     }
 }
